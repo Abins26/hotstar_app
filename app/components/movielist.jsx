@@ -1,12 +1,12 @@
 import React from 'react';
 import { View, Text, Image, ScrollView, StyleSheet } from 'react-native';
 
-const MovieScroll = ({ movies }) => {
+const MovieScroll = ({ data }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.cardHeading}>Latest Movies</Text>
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.cardContainer}>
-        {movies.map((movie, i) => (
+        {data.map((movie, i) => (
           <View key={i} style={styles.cards}>
             <Image source={{ uri: movie.posterURL }} style={styles.cardImage} />
           </View>

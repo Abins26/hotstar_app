@@ -35,20 +35,7 @@ const CarouselComponent = () => {
                         <View></View>
                     </View>
                 )}
-                // pagination={({ index, total }) => {
-                //     return (
-                //         <View style={styles.paginationContainer}>
-                //             {Array.from({ length: total }).map((_, i) => (
-                //                 <View
-                //                     key={i}
-                //                     style={[
-                //                         styles.paginationDot,
-                //                         index === i ? styles.activeDot : styles.inactiveDot
-                //                     ]}
-                //                     />
-                //                 ))}
-                //         </View>
-                // }}
+             
                 />
         </SafeAreaView>
     );
