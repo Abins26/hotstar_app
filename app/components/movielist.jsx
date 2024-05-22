@@ -1,4 +1,3 @@
-// MovieScroll.js
 import React from 'react';
 import { View, Text, Image, ScrollView, StyleSheet } from 'react-native';
 

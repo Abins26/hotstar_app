@@ -1,24 +1,24 @@
-// import React, { useState, useEffect } from 'react';
-// import axios from 'axios';
-// import MovieCarousel from './MovieCarousel'; // Import the display component
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import MovieCarousel from '../components/movielist'; 
 
-// export default function MovieList() {
-//   const [data, setData] = useState([]);
+export default function MovieList() {
+  const [data, setData] = useState([]);
 
-//   const getData = async () => {
-//     try {
-//       const resp = await axios.get('https://api.sampleapis.com/movies/animation');
-//       setData(resp.data);
-//     } catch (error) {
-//       console.error("Error fetching data:", error);
-//     }
-//   };
+  const getData = async () => {
+    try {
+      const resp = await axios.get('https://api.sampleapis.com/movies/animation');
+      setData(resp.data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
 
-//   useEffect(() => {
-//     getData();
-//   }, []);
+  useEffect(() => {
+    getData();
+  }, []);
 
-//   return (
-//     <MovieCarousel data={data} />
-//   );
-// }
+  return (
+    <MovieCarousel data={data} />
+  );
+}

@@ -9,6 +9,7 @@ const HomeScreen = () => {
       {/* <CarouselComponent/> */}
       <CarouselComponent/>
       {/* <Text style={styles.text}>Home Screen</Text> */}
+      <MovieScroll/>
     </View>
   );
 };
