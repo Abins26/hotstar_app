@@ -1,26 +1,49 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
 // import Carousel from 'react-native-reanimated-carousel';
-// import CarouselComponent from '../components/carosuel';
+// import CarouselComponen from '../components/carosuel';
 import CarouselComponent from '../components/carosuelswiper';
 import MovieScroll from '../components/movielist';
+import SeriesScroll from "../components/serieslist";
+
 const HomeScreen = () => {
   return (
-    <View style={styles.container}>
-      {/* <CarouselComponent/> */}
-      <CarouselComponent/>
-      <MovieScroll/>
-      {/* <Text style={styles.text}>Home Screen</Text> */}
-    </View>
+    <ScrollView >
+
+      <View>
+
+        <View style={styles.container}>
+          <CarouselComponent />
+        </View>
+        <View style={styles.movielist}>
+          <MovieScroll />
+          <SeriesScroll />
+          {/* <SeriesScroll />
+          <SeriesScroll /> */}
+          {/* <CarouselComponen/> */}
+
+        </View>
+
+        {/* <Text style={styles.text}>Home Screen</Text> */}
+      </View>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     // flex: 1,
-    height:450
+    display:'flex',
+    height:400,
+    backgroundColor:"black"
     // justifyContent: 'center',
     // alignItems: 'center',
+  },
+  movielist:{
+    display:'flex',
+    // backgroundColor:"white",
+    height:"auto",
+
   },
   text: {
     fontSize: 20,

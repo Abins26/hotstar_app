@@ -13,7 +13,7 @@ const MovieImages = [
 
 const { width: screenWidth } = Dimensions.get('window');
 
-const CarouselComponent = () => {
+const CarouselComponen = () => {
     return (
         <SafeAreaView style={styles.container}>
             <Carousel
@@ -31,7 +31,7 @@ const CarouselComponent = () => {
                 renderItem={({ item }) => (
                     <View style={styles.itemContainer}>
                         <ImageBackground source={{ uri: item.url }} style={styles.image} />
-                        <Image source={{uri: item.title}} style={styles.titleimage}/>
+                        {/* <Image source={{uri: item.title}} style={styles.titleimage}/> */}
                         <View></View>
                     </View>
                 )}
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
         // backgroundColor:'black'
     },
     itemContainer: {
-        backgroundColor: 'black',
+        backgroundColor: 'midnightblue',//-----------color
         borderRadius: 1,
         height: 250,
         padding: 1,
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     },
 });
 
-export default CarouselComponent;
+export default CarouselComponen;
 
 
 // mode="parallax"

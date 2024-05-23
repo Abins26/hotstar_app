@@ -1,39 +1,27 @@
 import React, { useState,useEffect } from 'react';
 import { View, Text, Image, ScrollView, StyleSheet, Pressable } from 'react-native';
 import apifetch from "../Apifetch/apifetch"
-import { useNavigation } from '@react-navigation/native';
 
-const MovieScroll = () => {
+const SeriesScroll = () => {
   const [data, setData] = useState([]);
-  const navigation = useNavigation();
+   
   useEffect(() => {
     const getData = async () => {
-      const movies = await apifetch('animation');
+      const movies = await apifetch('drama');
       setData(movies);
       // console.log(movies);
     };
     getData();
   }, []);
 
-//   useEffect(() => {
-//     apifetch().then((result)=>setData(result));
-// },[]);
-
     return (
     <View style={styles.container}>
-      <Text style={styles.cardHeading}>Latest Movies</Text>
-      <Pressable><Text>"sdfds"</Text></Pressable>
+      <Text style={styles.cardHeading}>Popular Movies</Text>
+      <Pressable><Text>{">"}</Text></Pressable>
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.cardContainer}>
         {data.map((movie, index) => (
           <View key={index} style={styles.cards}>
-               <Pressable
-            key={index}
-            style={styles.cards}
-            onPress={() => navigation.navigate('MovieDetailScreen', { movie })}
-          >
             <Image source={{ uri: movie.posterURL }} style={styles.cardImage} />
-          </Pressable>
-
           </View>
         ))}
       </ScrollView>
@@ -64,7 +52,7 @@ const styles = StyleSheet.create({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    margin: 3,
+    margin: 4,
     width: 120,
     height: 160,
   },
@@ -74,4 +62,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MovieScroll;
+export default SeriesScroll;
