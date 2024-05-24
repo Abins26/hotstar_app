@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from 'react-native';
 const DownloadsScreen = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}> Downloads Screen</Text>
+      <Text style={styles.text}>Your Downloads </Text>
     </View>
   );
 };

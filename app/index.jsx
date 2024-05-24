@@ -5,13 +5,13 @@ import { NavigationContainer } from '@react-navigation/native';
 import HomeScreen from './screens/homescreen';
 import SearchScreen from './screens/search';
 import MySpaceScreen from './screens/myspace';
-import New_HotScreen from './screens/new_hot';
+import NewHotScreen from './screens/new_hot';
 import DownloadsScreen from './screens/downloads';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
 import MovieDetailScreen from "./components/moviedetail";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
+// import { Colors } from 'react-native/Libraries/NewAppScreen';
 // import linking from '../Navigation/linking';
+
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -43,7 +43,7 @@ export default function Tabs() {
       >
         <Tab.Screen name="Home" component={Home_Screen} options={{headerShown:false}}/>
         <Tab.Screen name="Search" component={SearchScreen} options={{headerShown:false}}/>
-        <Tab.Screen name="New & Hot" component={New_HotScreen} options={{headerShown:false}}/>
+        <Tab.Screen name="New & Hot" component={NewHotScreen} options={{headerShown:false}}/>
         <Tab.Screen name="Downloads" component={DownloadsScreen} options={{headerShown:false}}/>
         <Tab.Screen name="My Space" component={MySpaceScreen} options={{headerShown:false}}/>
 

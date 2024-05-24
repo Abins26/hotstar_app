@@ -1,7 +1,7 @@
-import { View, Text,StyleSheet, ScrollView,Image } from 'react-native'
-import React from 'react'
+import React from 'react';
+import { View, Text,StyleSheet, ScrollView,Image } from 'react-native';
 
-const Popularlaguages = () => {
+const Popularlanguages = () => {
     const languages =[
         {url:"https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6661/1526661-a-00b818b5bc0e"},
         {url:"https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/6660/1526660-a-afdd1ecfd8ae"},
@@ -57,4 +57,4 @@ image:{
     width:"100%"
 },
 })
-export default Popularlaguages;
+export default Popularlanguages;

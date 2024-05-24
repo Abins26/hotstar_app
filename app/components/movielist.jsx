@@ -6,6 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 const MovieScroll = () => {
   const [data, setData] = useState([]);
   const navigation = useNavigation();
+
   useEffect(() => {
     const getData = async () => {
       const movies = await apifetch('animation');
@@ -15,25 +16,19 @@ const MovieScroll = () => {
     getData();
   }, []);
 
-//   useEffect(() => {
-//     apifetch().then((result)=>setData(result));
-// },[]);
 
     return (
     <View style={styles.container}>
       <Text style={styles.cardHeading}>Latest Movies</Text>
-      {/* <Pressable><Text></Text></Pressable> */}
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.cardContainer}>
         {data.map((movie, index) => (
           <View key={index} style={styles.cards}>
-               <Pressable
+             <Pressable
             key={index}
             style={styles.cards}
-            onPress={() => navigation.navigate('MovieDetailScreen', { movie })}
-          >
+            onPress={() => navigation.navigate('MovieDetailScreen', { movie })} >
             <Image source={{ uri: movie.posterURL }} style={styles.cardImage} />
-          </Pressable>
-
+            </Pressable>
           </View>
         ))}
       </ScrollView>

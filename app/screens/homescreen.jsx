@@ -5,7 +5,7 @@ import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import CarouselComponent from '../components/carosuelswiper';
 import MovieScroll from '../components/movielist';
 import SeriesScroll from "../components/serieslist";
-import Popularlaguages from "../components/popularlaguages";
+import Popularlanguages from "../components/popularlaguages";
 
 
 const HomeScreen = () => {
@@ -20,7 +20,7 @@ const HomeScreen = () => {
         <View style={styles.movielist}>
           <MovieScroll />
           <SeriesScroll />
-          <Popularlaguages/>
+          <Popularlanguages/>
           <MovieScroll />
 
           {/* <SeriesScroll />
@@ -37,6 +37,7 @@ const HomeScreen = () => {
 
 const styles = StyleSheet.create({
   container: {
+    
     // flex: 1,
     display:'flex',
     height:450,

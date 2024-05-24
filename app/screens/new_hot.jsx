@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const New_HotScreen = () => {
+const NewHotScreen = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>New & Hot Screen</Text>
@@ -23,4 +23,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default New_HotScreen;
+export default NewHotScreen;
