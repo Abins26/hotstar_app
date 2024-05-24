@@ -22,7 +22,7 @@ const MovieScroll = () => {
     return (
     <View style={styles.container}>
       <Text style={styles.cardHeading}>Latest Movies</Text>
-      <Pressable><Text>"sdfds"</Text></Pressable>
+      {/* <Pressable><Text></Text></Pressable> */}
       <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.cardContainer}>
         {data.map((movie, index) => (
           <View key={index} style={styles.cards}>
@@ -51,6 +51,7 @@ const styles = StyleSheet.create({
   cardContainer: {
     // backgroundColor: "gray",
     width: "auto",
+    paddingBottom:4
   },
   cardHeading: {
     fontSize: 16,
